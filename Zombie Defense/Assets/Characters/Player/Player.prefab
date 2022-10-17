@@ -153,6 +153,7 @@ MonoBehaviour:
   rb: {fileID: 3802901390062060870}
   health: 5
   animator: {fileID: 3802901390062060923}
+  spriteRenderer: {fileID: 0}
 --- !u!114 &3802901390062060922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +177,7 @@ Animator:
   m_GameObject: {fileID: 3802901390062060868}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e36901868d67737468dde5459d6841fd, type: 2}
+  m_Controller: {fileID: 9100000, guid: b284a967b849e2d4cafdc00bd9855ce9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
