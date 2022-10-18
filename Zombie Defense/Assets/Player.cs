@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -37,6 +38,10 @@ public class Player : MonoBehaviour
             {
                 animator.Play("Attack_front", 0, 1f);
             }
+        }
+
+        if(health <= 0){
+            SceneManager.LoadScene(0);
         }
     }
 
