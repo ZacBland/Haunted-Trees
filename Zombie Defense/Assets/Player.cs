@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
     public Camera sceneCamera;
     public float moveSpeed;
+    public TextMeshProUGUI healthDisplay;
+    public TextMeshProUGUI gemDisplay;
     public Rigidbody2D rb;
     private Vector2 moveDirection;
     public int health = 5;
+    public int gems = 0;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
 
@@ -18,6 +22,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthDisplay.text = "Health: " + health;
+        gemDisplay.text = "Gems: " + gems;
         if(health > 0){
             ProcessInputs();   
         }

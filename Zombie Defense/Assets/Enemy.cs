@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     private Player player;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
+    public GameObject heart;
+    public GameObject gem;
     
 
     // Start is called before the first frame update
@@ -64,6 +66,15 @@ public class Enemy : MonoBehaviour
 
         if(other.CompareTag("Projectile")){
             Destroy(gameObject);
+            int posHeart = (Random.Range(1,11));
+            if(posHeart == 3){
+                Instantiate(heart,transform.position,Quaternion.identity);
+                Debug.Log("Heart");
+            }
+            if(posHeart == 6){
+                Instantiate(gem,transform.position,Quaternion.identity);
+                Debug.Log("Gem");
+            }
             Destroy(other.gameObject);
         }
     }
