@@ -12,12 +12,14 @@ public class Enemy : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public GameObject heart;
     public GameObject gem;
+    private int lowSpeed = 5;
+    private int highSpeed = 9;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        int randSpeed = (Random.Range(5, 9));
+        int randSpeed = (Random.Range(lowSpeed, highSpeed));
         speed = ((float)randSpeed)/8;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();

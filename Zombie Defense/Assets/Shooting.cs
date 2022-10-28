@@ -8,7 +8,7 @@ public class Shooting : MonoBehaviour
 {
     public GameObject shot;
     private Transform playerPos;
-    private float startShootTime = 0.5f;
+    private float delayShootTime = 0.5f;
     private float shootTime;
     void Start(){
         playerPos = GetComponent<Transform>();
@@ -21,7 +21,7 @@ public class Shooting : MonoBehaviour
             Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - playerPos.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             Instantiate(shot, playerPos.position, Quaternion.Euler(0f, 0f, angle - 90f));
-            shootTime = startShootTime;
+            shootTime = delayShootTime;
         }
         }
         else{

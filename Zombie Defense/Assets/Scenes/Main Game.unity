@@ -392,6 +392,7 @@ GameObject:
   - component: {fileID: 284220188}
   - component: {fileID: 284220190}
   - component: {fileID: 284220189}
+  - component: {fileID: 284220191}
   m_Layer: 5
   m_Name: Round Display
   m_TagString: Untagged
@@ -516,6 +517,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284220187}
   m_CullTransparentMesh: 1
+--- !u!114 &284220191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284220187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e5874acdc1b974eac6a1d545df2b5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elapsedTime: 0
+  round: 0
+  roundDisplay: {fileID: 284220189}
 --- !u!1 &386422331
 GameObject:
   m_ObjectHideFlags: 0
@@ -70651,6 +70667,10 @@ PrefabInstance:
       propertyPath: sceneCamera
       value: 
       objectReference: {fileID: 1526677276}
+    - target: {fileID: 3802901390062060869, guid: 1badeb2f3f9016143b48c65022d8f85c, type: 3}
+      propertyPath: roundDisplay
+      value: 
+      objectReference: {fileID: 284220189}
     - target: {fileID: 3802901390062060869, guid: 1badeb2f3f9016143b48c65022d8f85c, type: 3}
       propertyPath: healthDisplay
       value: 

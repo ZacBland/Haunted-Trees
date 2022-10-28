@@ -8,11 +8,11 @@ public class Spawner : MonoBehaviour
     public GameObject enemy;
     public Transform[] spawnSpots;
     private float timeBtwSpawns;
-    private float startTimeBtwSpawns = 1.5f;
+    private float spawnDelay = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
-        timeBtwSpawns = startTimeBtwSpawns;
+        timeBtwSpawns = spawnDelay;
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class Spawner : MonoBehaviour
         if(timeBtwSpawns <= 0){
             int randPos = Random.Range(0, spawnSpots.Length - 1);
             Instantiate(enemy, spawnSpots[randPos].position, Quaternion.identity);
-            timeBtwSpawns = startTimeBtwSpawns;
+            timeBtwSpawns = spawnDelay;
         } else {
             timeBtwSpawns -= Time.deltaTime;
         }
