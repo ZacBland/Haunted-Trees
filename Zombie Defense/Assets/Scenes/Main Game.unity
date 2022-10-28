@@ -354,6 +354,8 @@ MonoBehaviour:
   - {fileID: 1909890794}
   - {fileID: 1733530901}
   - {fileID: 1992940764}
+  roundData: {fileID: 284220191}
+  spawnDelay: 1.5
 --- !u!4 &262809517
 Transform:
   m_ObjectHideFlags: 0
@@ -532,6 +534,9 @@ MonoBehaviour:
   elapsedTime: 0
   round: 0
   roundDisplay: {fileID: 284220189}
+  spawnDelay: 0
+  bottomSpeed: 0
+  topSpeed: 0
 --- !u!1 &386422331
 GameObject:
   m_ObjectHideFlags: 0

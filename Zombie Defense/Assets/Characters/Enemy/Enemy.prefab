@@ -104,6 +104,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1185996748506557693}
   heart: {fileID: 8698630484488825486, guid: 71d8a61fc1b02be4cac8adff0ff289ce, type: 3}
   gem: {fileID: 7731608457151788315, guid: b6255d468f23311409a76628869b8378, type: 3}
+  speedData: {fileID: 0}
 --- !u!61 &5141552480708798137
 BoxCollider2D:
   m_ObjectHideFlags: 0

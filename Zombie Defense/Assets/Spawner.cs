@@ -7,17 +7,21 @@ public class Spawner : MonoBehaviour
 
     public GameObject enemy;
     public Transform[] spawnSpots;
+    public RoundController roundData;
     private float timeBtwSpawns;
-    private float spawnDelay = 0.5f;
+    public float spawnDelay = 0f;
     // Start is called before the first frame update
     void Start()
     {
-        timeBtwSpawns = spawnDelay;
     }
 
     // Update is called once per frame
     void Update()
     {
+        spawnDelay = roundData.spawnDelay;
+        if(spawnDelay != roundData.spawnDelay){
+        timeBtwSpawns = spawnDelay;
+        }
         if(timeBtwSpawns <= 0){
             int randPos = Random.Range(0, spawnSpots.Length - 1);
             Instantiate(enemy, spawnSpots[randPos].position, Quaternion.identity);
