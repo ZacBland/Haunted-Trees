@@ -7,6 +7,7 @@ public class Heart : MonoBehaviour
 
     private float despawnTime = 7f;
     private Player player;
+    public AudioSource healthPickup;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class Heart : MonoBehaviour
         if(other.CompareTag("Player")){
             player.health++;
             Destroy(gameObject);
+            healthPickup.Play();
         }
     }
 }

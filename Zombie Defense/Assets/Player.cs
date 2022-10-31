@@ -10,12 +10,18 @@ public class Player : MonoBehaviour
     public float moveSpeed;
     public TextMeshProUGUI healthDisplay;
     public TextMeshProUGUI gemDisplay;
+    public TextMeshProUGUI speedDisplay;
+    public TextMeshProUGUI reloadDisplay;
+    public TextMeshProUGUI magicArrowDisplay;
     public Rigidbody2D rb;
     private Vector2 moveDirection;
     public int health = 5;
     public int gems = 0;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
+    public float delayShootTime = 0.5f;
+    public int powerUp = 0; //1(increased speed), 2(increased reload speed), 3 (trishot)
+    public bool magicArrow = false;
 
     private Vector2 mousePosition;
 
@@ -49,6 +55,8 @@ public class Player : MonoBehaviour
         if(health <= 0){
             SceneManager.LoadScene(0);
         }
+
+        getPowerUp();
     }
 
     void FixedUpdate(){
@@ -94,11 +102,30 @@ public class Player : MonoBehaviour
         animator.SetBool("IsMovingUp", IsMovingUp);
         animator.SetBool("IsMovingDown", IsMovingDown);
         
-
+    
 
 
         // Vector2 aimDirection = mousePosition - rb.position;
         //float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
         //rb.rotation = aimAngle;
+    }
+
+    void getPowerUp(){
+        if(gems >= 3){
+            gems = 0;
+            powerUp += 1;
+            if(powerUp == 1){
+                moveSpeed += 0.7f;
+                speedDisplay.text = "SPEEDY BOOTS";
+            }
+            if(powerUp == 2){
+                delayShootTime = 0.15f;
+                reloadDisplay.text = "SPEEDY RELOAD";
+            }
+            if(powerUp >= 3){
+                magicArrow = true;
+                magicArrowDisplay.text = "MAGIC ARROWS";
+            }
+        }
     }
 }

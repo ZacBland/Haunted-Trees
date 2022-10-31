@@ -8,14 +8,17 @@ public class Shooting : MonoBehaviour
 {
     public GameObject shot;
     private Transform playerPos;
-    private float delayShootTime = 0.5f;
+    private float delayShootTime;
     private float shootTime;
+    public Player player;
     void Start(){
         playerPos = GetComponent<Transform>();
+        delayShootTime = player.delayShootTime;
     }
     // Update is called once per frame
     void Update()
     {
+        delayShootTime = player.delayShootTime;
         if(shootTime <= 0){
         if(Input.GetMouseButtonDown(0)){
             Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - playerPos.position;

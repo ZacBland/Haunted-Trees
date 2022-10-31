@@ -68,7 +68,7 @@ public class Enemy : MonoBehaviour
 
         if(other.CompareTag("Projectile")){
             Destroy(gameObject);
-            int posHeart = (Random.Range(1,11));
+            int posHeart = (Random.Range(1,10));
             if(posHeart == 3){
                 Instantiate(heart,transform.position,Quaternion.identity);
                 Debug.Log("Heart");
@@ -77,7 +77,9 @@ public class Enemy : MonoBehaviour
                 Instantiate(gem,transform.position,Quaternion.identity);
                 Debug.Log("Gem");
             }
+            if(player.magicArrow == false){
             Destroy(other.gameObject);
+            }
         }
     }
 }

@@ -27,6 +27,9 @@ public class RoundController : MonoBehaviour
     }
 
     void setRound(){
+        if(elapsedTime > 150) {
+            round = 6;
+        }
         if(elapsedTime > 120) {
             round = 5;
         }
@@ -49,22 +52,27 @@ public class RoundController : MonoBehaviour
             topSpeed = 4;
         }
         if(round == 2){
-            spawnDelay = 1.2f;
+            spawnDelay = 1.4f;
             bottomSpeed = 3;
             topSpeed = 4;
         }
         if(round == 3){
-            spawnDelay = 1.7f;
+            spawnDelay = 1f;
             bottomSpeed = 5;
             topSpeed = 7;
         }
         if(round == 4){
-            spawnDelay = 0.4f;
+            spawnDelay = 0.7f;
             bottomSpeed = 3;
             topSpeed = 5;
         }
         if(round == 5){
-            spawnDelay = 1f;
+            spawnDelay = 0.4f;
+            bottomSpeed = 6;
+            topSpeed = 9;
+        }
+        if(round == 6){
+            spawnDelay = 0.2f;
             bottomSpeed = 6;
             topSpeed = 9;
         }
