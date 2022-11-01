@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UI;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -12,6 +13,7 @@ public class Enemy : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public GameObject heart;
     public GameObject gem;
+    public AudioClip sound;
     private int lowSpeed = 5;
     private int highSpeed = 9;
     
@@ -67,7 +69,7 @@ public class Enemy : MonoBehaviour
         }
 
         if(other.CompareTag("Projectile")){
-            Destroy(gameObject);
+            SoundManager.PlaySound(sound);
             int posHeart = (Random.Range(1,10));
             if(posHeart == 3){
                 Instantiate(heart,transform.position,Quaternion.identity);
@@ -78,8 +80,16 @@ public class Enemy : MonoBehaviour
                 Debug.Log("Gem");
             }
             if(player.magicArrow == false){
-            Destroy(other.gameObject);
+                Destroy(other.gameObject);
             }
+
+            Destroy(gameObject);
+
+
         }
     }
+
+
+
+
 }

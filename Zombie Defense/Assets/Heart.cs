@@ -7,7 +7,7 @@ public class Heart : MonoBehaviour
 
     private float despawnTime = 7f;
     private Player player;
-    public AudioSource healthPickup;
+    public AudioClip healthPickup;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +25,9 @@ public class Heart : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player")){
+            SoundManager.PlaySound(healthPickup);
             player.health++;
             Destroy(gameObject);
-            healthPickup.Play();
         }
     }
 }

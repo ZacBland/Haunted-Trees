@@ -6,8 +6,9 @@ public class Spawner : MonoBehaviour
 {
 
     public GameObject enemy;
-    public Transform[] spawnSpots;
+    public GameObject player;
     public RoundController roundData;
+    public float spawnDistance;
     private float timeBtwSpawns;
     public float spawnDelay = 0f;
     // Start is called before the first frame update
@@ -23,8 +24,14 @@ public class Spawner : MonoBehaviour
         timeBtwSpawns = spawnDelay;
         }
         if(timeBtwSpawns <= 0){
-            int randPos = Random.Range(0, spawnSpots.Length - 1);
-            Instantiate(enemy, spawnSpots[randPos].position, Quaternion.identity);
+            float angle = Random.Range(0, 360);
+
+            float xdist = spawnDistance * Mathf.Cos(angle);
+            float ydist = spawnDistance * Mathf.Sin(angle);
+
+            Vector3 pos = player.transform.position + new Vector3(xdist, ydist, 0);
+
+            Instantiate(enemy, pos, Quaternion.identity);
             timeBtwSpawns = spawnDelay;
         } else {
             timeBtwSpawns -= Time.deltaTime;

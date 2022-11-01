@@ -7,6 +7,7 @@ public class Gem : MonoBehaviour
 
     private float despawnTime = 7f;
     private Player player;
+    public AudioClip sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class Gem : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player")){
+            SoundManager.PlaySound(sound);
             player.gems++;
             Destroy(gameObject);
         }

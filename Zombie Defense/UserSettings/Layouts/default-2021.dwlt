@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1902
     height: 971
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 104
+  controlID: 93
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 134
+  controlID: 18
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -289,7 +289,7 @@ MonoBehaviour:
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 382
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -325,7 +325,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -5614
+  m_LastSelectedObjectID: 40838
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -426,9 +426,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: b284a967b849e2d4cafdc00bd9855ce9, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 6c84eb3f0a572254a84f6bb1ef3a91b7, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 4216135378842453539, guid: b284a967b849e2d4cafdc00bd9855ce9, type: 2}
+  - m_Target: {fileID: 3104102544437052169, guid: 6c84eb3f0a572254a84f6bb1ef3a91b7, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -500,23 +500,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 62680000
+      m_SelectedIDs: 54680000
       m_LastClickedID: 0
-      m_ExpandedIDs: eef8feff34f9feff90fbfeffa0fbfeff14eaffff0cfbffff7488000088880000be880000c8880000e6a900003eaa0000
+      m_ExpandedIDs: 0afbffff40650000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Tilemap
-        m_OriginalName: Tilemap
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 34962
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 2}
       m_SearchString: 
@@ -567,23 +567,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Sound Effects
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Sound Effects
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\jspac\OneDrive\Documents\GitHub\ZombieDefense\Zombie
-    Defense
+  m_LastProjectPath: C:\Users\Zac\Desktop\final\Haunted-Trees\Zombie Defense
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4a850000
-    m_LastClickedID: 34122
-    m_ExpandedIDs: 00000000f0690000f2690000f4690000f6690000f8690000fa690000fc690000fe690000006a0000026a0000046a0000066a0000086a00000a6a00000c6a000000ca9a3b
+    m_SelectedIDs: 2c6a0000
+    m_LastClickedID: 27180
+    m_ExpandedIDs: 00000000186a0000226a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -611,7 +610,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f0690000f2690000f4690000f6690000f8690000fa690000fc690000fe690000006a0000026a0000046a0000066a0000086a00000a6a00000c6a0000
+    m_ExpandedIDs: 00000000186a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

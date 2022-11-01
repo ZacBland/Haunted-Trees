@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class Shooting : MonoBehaviour
 {
     public GameObject shot;
+    public AudioSource shot_audio;
     private Transform playerPos;
     private float delayShootTime;
     private float shootTime;
@@ -20,12 +21,13 @@ public class Shooting : MonoBehaviour
     {
         delayShootTime = player.delayShootTime;
         if(shootTime <= 0){
-        if(Input.GetMouseButtonDown(0)){
-            Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - playerPos.position;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Instantiate(shot, playerPos.position, Quaternion.Euler(0f, 0f, angle - 90f));
-            shootTime = delayShootTime;
-        }
+            if(Input.GetMouseButtonDown(0)){
+                Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - playerPos.position;
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                Instantiate(shot, playerPos.position, Quaternion.Euler(0f, 0f, angle - 90f));
+                shot_audio.Play();
+                shootTime = delayShootTime;
+            }
         }
         else{
             shootTime -= Time.deltaTime;
