@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UI;
+//using UnityEditor.UI;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -14,8 +14,12 @@ public class Enemy : MonoBehaviour
     public GameObject heart;
     public GameObject gem;
     public AudioClip sound;
-    private int lowSpeed = 5;
-    private int highSpeed = 9;
+    public AudioClip sound2;
+    public AudioClip sound3;
+    public AudioClip healthLossSound;
+    private int lowSpeed = 6;
+    private int highSpeed = 10;
+    private int randSound;
     
 
     // Start is called before the first frame update
@@ -64,12 +68,27 @@ public class Enemy : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player")){
             player.health--;
+            SoundManager.PlaySound(healthLossSound);
             Debug.Log(player.health);
             Destroy(gameObject);
         }
 
         if(other.CompareTag("Projectile")){
+
+            
+            int randSound = (Random.Range(1,4));
+            if(randSound == 1){
             SoundManager.PlaySound(sound);
+            }
+            if(randSound == 2){
+            SoundManager.PlaySound(sound2);
+            }
+            if(randSound == 3){
+            SoundManager.PlaySound(sound3);
+            }
+            Debug.Log(randSound);
+            
+            
             int posHeart = (Random.Range(1,10));
             if(posHeart == 3){
                 Instantiate(heart,transform.position,Quaternion.identity);

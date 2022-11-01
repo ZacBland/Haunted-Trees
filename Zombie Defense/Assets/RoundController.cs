@@ -30,7 +30,7 @@ public class RoundController : MonoBehaviour
         if(elapsedTime > 150) {
             round = 6;
         }
-        if(elapsedTime > 120) {
+        else if(elapsedTime > 120) {
             round = 5;
         }
         else if(elapsedTime > 90) {

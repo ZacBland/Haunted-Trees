@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public int powerUp = 0; //1(increased speed), 2(increased reload speed), 3 (trishot)
     public bool magicArrow = false;
 
+
     private Vector2 mousePosition;
 
     // Update is called once per frame
@@ -115,11 +116,11 @@ public class Player : MonoBehaviour
             gems = 0;
             powerUp += 1;
             if(powerUp == 1){
-                moveSpeed += 0.7f;
+                moveSpeed += 0.5f;
                 speedDisplay.text = "SPEEDY BOOTS";
             }
             if(powerUp == 2){
-                delayShootTime = 0.15f;
+                delayShootTime = 0.2f;
                 reloadDisplay.text = "SPEEDY RELOAD";
             }
             if(powerUp >= 3){
